@@ -8,3 +8,4 @@ The overall goal is to predict the log error, which is defined as
 
 ## EDA
 - A [Tableau dashboard](https://public.tableau.com/profile/qi.feng1229#!/vizhome/Zestimate_15894928320550/Dashboard3?publish=yes) was created for interactive visualization.
+<img src="https://github.com/lullaby1024/zestimate/blob/master/zestimate_tableau_preview.png" width="80%">
