@@ -18,3 +18,19 @@ The goal is to minimize the Maximum Absolute Error between the predicted log err
   - Categorical features with too many categories: `propertyzoningdesc`
   - Redundant/Highly-correlated features
     - `regionidneighborhood`, `regionidzip`, `bathroomcnt`, `fullbathcnt`, `calculatedfinishedsquarefeet`, `garagetotalsqft`, `rawcensustractandblock`, `landtaxvaluedollarcnt`, `taxvaluedollarcnt`
+
+## Model
+- The following table presents a summary of the model performances.
+
+| Model  | Preprocessing | Tuning | Validation MAE | 
+| ------------- | ------------- | ------------- | ------------- | 
+| Baseline: Logistic Regression | OneHotEncoder, Imputation | No | 0.0685 |
+| Improved Baseline: Logistic Regression | OneHotEncoder, TargetEncoder, Imputation, StandardScaler | No | 0.0698 |
+| Lasso | OneHotEncoder, TargetEncoder, Imputation, StandardScaler | Yes | 0.0684 |
+| Ridge | OneHotEncoder, TargetEncoder, Imputation, StandardScaler | Yes | 0.0686 |
+| Elastic Net | OneHotEncoder, TargetEncoder, Imputation, StandardScaler | Yes | 0.0684 |
+| Decision Tree | OneHotEncoder, TargetEncoder, Imputation, StandardScaler | Yes | 0.0681 |
+| **Random Forest** | OneHotEncoder, TargetEncoder, Imputation, StandardScaler | Yes | 0.0680 |
+| Gradient Boosting | OneHotEncoder, TargetEncoder, Imputation, StandardScaler | Yes | 0.0686 |
+
+- Random forest is the best model. The test MAE is 0.0677.
